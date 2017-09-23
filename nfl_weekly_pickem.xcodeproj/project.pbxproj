@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25A0ACE5C11A7A43200F06F3 /* Pods_nfl_weekly_pickem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3A2165787DCC53C2D3346F /* Pods_nfl_weekly_pickem.framework */; };
 		FC40901D1F76A81F00DBA4F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40901C1F76A81F00DBA4F9 /* AppDelegate.swift */; };
 		FC40901F1F76A81F00DBA4F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40901E1F76A81F00DBA4F9 /* ViewController.swift */; };
 		FC4090241F76A81F00DBA4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC4090231F76A81F00DBA4F9 /* Assets.xcassets */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A3A2165787DCC53C2D3346F /* Pods_nfl_weekly_pickem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nfl_weekly_pickem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32668112C5A0234B8752E22D /* Pods-nfl_weekly_pickem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nfl_weekly_pickem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nfl_weekly_pickem/Pods-nfl_weekly_pickem.debug.xcconfig"; sourceTree = "<group>"; };
+		F9541FAC9AD653EC0CCBFA18 /* Pods-nfl_weekly_pickem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nfl_weekly_pickem.release.xcconfig"; path = "Pods/Target Support Files/Pods-nfl_weekly_pickem/Pods-nfl_weekly_pickem.release.xcconfig"; sourceTree = "<group>"; };
 		FC4090191F76A81F00DBA4F9 /* nfl_weekly_pickem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nfl_weekly_pickem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC40901C1F76A81F00DBA4F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC40901E1F76A81F00DBA4F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25A0ACE5C11A7A43200F06F3 /* Pods_nfl_weekly_pickem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		557686CF2BE57ED245143633 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A3A2165787DCC53C2D3346F /* Pods_nfl_weekly_pickem.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6E82D39A8BF419A627E4161 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32668112C5A0234B8752E22D /* Pods-nfl_weekly_pickem.debug.xcconfig */,
+				F9541FAC9AD653EC0CCBFA18 /* Pods-nfl_weekly_pickem.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FC4090101F76A81F00DBA4F9 = {
 			isa = PBXGroup;
 			children = (
 				FC40901B1F76A81F00DBA4F9 /* nfl_weekly_pickem */,
 				FC40901A1F76A81F00DBA4F9 /* Products */,
+				F6E82D39A8BF419A627E4161 /* Pods */,
+				557686CF2BE57ED245143633 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,9 +130,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC40902B1F76A81F00DBA4F9 /* Build configuration list for PBXNativeTarget "nfl_weekly_pickem" */;
 			buildPhases = (
+				323CBEE09CD83F2F6BA0AE94 /* [CP] Check Pods Manifest.lock */,
 				FC4090151F76A81F00DBA4F9 /* Sources */,
 				FC4090161F76A81F00DBA4F9 /* Frameworks */,
 				FC4090171F76A81F00DBA4F9 /* Resources */,
+				209737E46D1565889FDE7B2D /* [CP] Embed Pods Frameworks */,
+				23A7F491B3315F20A539AF23 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,6 +191,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		209737E46D1565889FDE7B2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-nfl_weekly_pickem/Pods-nfl_weekly_pickem-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-nfl_weekly_pickem/Pods-nfl_weekly_pickem-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23A7F491B3315F20A539AF23 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-nfl_weekly_pickem/Pods-nfl_weekly_pickem-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		323CBEE09CD83F2F6BA0AE94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-nfl_weekly_pickem-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FC4090151F76A81F00DBA4F9 /* Sources */ = {
@@ -300,11 +383,13 @@
 		};
 		FC40902C1F76A81F00DBA4F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32668112C5A0234B8752E22D /* Pods-nfl_weekly_pickem.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MW3VV3UQR6;
 				INFOPLIST_FILE = nfl_weekly_pickem/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cleverbureau.nfl-weekly-pickem";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -315,11 +400,13 @@
 		};
 		FC40902D1F76A81F00DBA4F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9541FAC9AD653EC0CCBFA18 /* Pods-nfl_weekly_pickem.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MW3VV3UQR6;
 				INFOPLIST_FILE = nfl_weekly_pickem/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cleverbureau.nfl-weekly-pickem";
 				PRODUCT_NAME = "$(TARGET_NAME)";
