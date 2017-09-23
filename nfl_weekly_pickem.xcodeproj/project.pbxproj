@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		25A0ACE5C11A7A43200F06F3 /* Pods_nfl_weekly_pickem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3A2165787DCC53C2D3346F /* Pods_nfl_weekly_pickem.framework */; };
+		FC0A135D1F76BA2200AB2965 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A135C1F76BA2200AB2965 /* Game.swift */; };
+		FC0A13601F76C11C00AB2965 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A135F1F76C11C00AB2965 /* Array.swift */; };
+		FC0A13631F76CAA800AB2965 /* PickemKolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A13621F76CAA800AB2965 /* PickemKolodaView.swift */; };
+		FC0A13651F76CBBF00AB2965 /* PickemTeamInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A13641F76CBBF00AB2965 /* PickemTeamInfoView.swift */; };
+		FC0A13671F76D33700AB2965 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A13661F76D33700AB2965 /* Team.swift */; };
+		FC0A13691F76D6BD00AB2965 /* TeamStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A13681F76D6BD00AB2965 /* TeamStat.swift */; };
+		FC0A136B1F76D76700AB2965 /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A136A1F76D76700AB2965 /* GameInfo.swift */; };
+		FC0A136D1F76E9BE00AB2965 /* PickemBottomInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A136C1F76E9BE00AB2965 /* PickemBottomInfoView.swift */; };
+		FC0A136F1F76EB5B00AB2965 /* AtCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A136E1F76EB5B00AB2965 /* AtCircleView.swift */; };
 		FC40901D1F76A81F00DBA4F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40901C1F76A81F00DBA4F9 /* AppDelegate.swift */; };
 		FC40901F1F76A81F00DBA4F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40901E1F76A81F00DBA4F9 /* ViewController.swift */; };
 		FC4090241F76A81F00DBA4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC4090231F76A81F00DBA4F9 /* Assets.xcassets */; };
@@ -20,6 +29,15 @@
 		1A3A2165787DCC53C2D3346F /* Pods_nfl_weekly_pickem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nfl_weekly_pickem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32668112C5A0234B8752E22D /* Pods-nfl_weekly_pickem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nfl_weekly_pickem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nfl_weekly_pickem/Pods-nfl_weekly_pickem.debug.xcconfig"; sourceTree = "<group>"; };
 		F9541FAC9AD653EC0CCBFA18 /* Pods-nfl_weekly_pickem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nfl_weekly_pickem.release.xcconfig"; path = "Pods/Target Support Files/Pods-nfl_weekly_pickem/Pods-nfl_weekly_pickem.release.xcconfig"; sourceTree = "<group>"; };
+		FC0A135C1F76BA2200AB2965 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		FC0A135F1F76C11C00AB2965 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		FC0A13621F76CAA800AB2965 /* PickemKolodaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickemKolodaView.swift; sourceTree = "<group>"; };
+		FC0A13641F76CBBF00AB2965 /* PickemTeamInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickemTeamInfoView.swift; sourceTree = "<group>"; };
+		FC0A13661F76D33700AB2965 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		FC0A13681F76D6BD00AB2965 /* TeamStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStat.swift; sourceTree = "<group>"; };
+		FC0A136A1F76D76700AB2965 /* GameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfo.swift; sourceTree = "<group>"; };
+		FC0A136C1F76E9BE00AB2965 /* PickemBottomInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickemBottomInfoView.swift; sourceTree = "<group>"; };
+		FC0A136E1F76EB5B00AB2965 /* AtCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtCircleView.swift; sourceTree = "<group>"; };
 		FC4090191F76A81F00DBA4F9 /* nfl_weekly_pickem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nfl_weekly_pickem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC40901C1F76A81F00DBA4F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC40901E1F76A81F00DBA4F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +77,36 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FC0A135B1F76BA1200AB2965 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC0A135C1F76BA2200AB2965 /* Game.swift */,
+				FC0A13661F76D33700AB2965 /* Team.swift */,
+				FC0A13681F76D6BD00AB2965 /* TeamStat.swift */,
+				FC0A136A1F76D76700AB2965 /* GameInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FC0A135E1F76C10F00AB2965 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FC0A135F1F76C11C00AB2965 /* Array.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FC0A13611F76CA9700AB2965 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC0A13621F76CAA800AB2965 /* PickemKolodaView.swift */,
+				FC0A13641F76CBBF00AB2965 /* PickemTeamInfoView.swift */,
+				FC0A136C1F76E9BE00AB2965 /* PickemBottomInfoView.swift */,
+				FC0A136E1F76EB5B00AB2965 /* AtCircleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FC4090101F76A81F00DBA4F9 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +141,9 @@
 		FC40902E1F76A8D000DBA4F9 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				FC0A13611F76CA9700AB2965 /* Views */,
+				FC0A135E1F76C10F00AB2965 /* Extension */,
+				FC0A135B1F76BA1200AB2965 /* Models */,
 				FC4090321F76ADFA00DBA4F9 /* ViewControllers */,
 				FC40902F1F76A8D800DBA4F9 /* TabBarController */,
 			);
@@ -201,11 +252,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-nfl_weekly_pickem/Pods-nfl_weekly_pickem-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,9 +306,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC0A13671F76D33700AB2965 /* Team.swift in Sources */,
 				FC4090311F76A8F100DBA4F9 /* TabBarController.swift in Sources */,
+				FC0A13691F76D6BD00AB2965 /* TeamStat.swift in Sources */,
 				FC4090351F76AE2000DBA4F9 /* PickemViewController.swift in Sources */,
+				FC0A13651F76CBBF00AB2965 /* PickemTeamInfoView.swift in Sources */,
+				FC0A13631F76CAA800AB2965 /* PickemKolodaView.swift in Sources */,
+				FC0A136F1F76EB5B00AB2965 /* AtCircleView.swift in Sources */,
+				FC0A136D1F76E9BE00AB2965 /* PickemBottomInfoView.swift in Sources */,
 				FC40901F1F76A81F00DBA4F9 /* ViewController.swift in Sources */,
+				FC0A13601F76C11C00AB2965 /* Array.swift in Sources */,
+				FC0A136B1F76D76700AB2965 /* GameInfo.swift in Sources */,
+				FC0A135D1F76BA2200AB2965 /* Game.swift in Sources */,
 				FC40901D1F76A81F00DBA4F9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,7 +455,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cleverbureau.nfl-weekly-pickem";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -410,7 +472,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cleverbureau.nfl-weekly-pickem";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
