@@ -9,19 +9,21 @@
 /* Begin PBXBuildFile section */
 		FC40901D1F76A81F00DBA4F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40901C1F76A81F00DBA4F9 /* AppDelegate.swift */; };
 		FC40901F1F76A81F00DBA4F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40901E1F76A81F00DBA4F9 /* ViewController.swift */; };
-		FC4090221F76A81F00DBA4F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4090201F76A81F00DBA4F9 /* Main.storyboard */; };
 		FC4090241F76A81F00DBA4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC4090231F76A81F00DBA4F9 /* Assets.xcassets */; };
 		FC4090271F76A81F00DBA4F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4090251F76A81F00DBA4F9 /* LaunchScreen.storyboard */; };
+		FC4090311F76A8F100DBA4F9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4090301F76A8F100DBA4F9 /* TabBarController.swift */; };
+		FC4090351F76AE2000DBA4F9 /* PickemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4090341F76AE2000DBA4F9 /* PickemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FC4090191F76A81F00DBA4F9 /* nfl_weekly_pickem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nfl_weekly_pickem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC40901C1F76A81F00DBA4F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC40901E1F76A81F00DBA4F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FC4090211F76A81F00DBA4F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC4090231F76A81F00DBA4F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC4090261F76A81F00DBA4F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC4090281F76A81F00DBA4F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC4090301F76A8F100DBA4F9 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FC4090341F76AE2000DBA4F9 /* PickemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,47 @@
 		FC40901B1F76A81F00DBA4F9 /* nfl_weekly_pickem */ = {
 			isa = PBXGroup;
 			children = (
+				FC40902E1F76A8D000DBA4F9 /* App */,
 				FC40901C1F76A81F00DBA4F9 /* AppDelegate.swift */,
 				FC40901E1F76A81F00DBA4F9 /* ViewController.swift */,
-				FC4090201F76A81F00DBA4F9 /* Main.storyboard */,
 				FC4090231F76A81F00DBA4F9 /* Assets.xcassets */,
 				FC4090251F76A81F00DBA4F9 /* LaunchScreen.storyboard */,
 				FC4090281F76A81F00DBA4F9 /* Info.plist */,
 			);
 			path = nfl_weekly_pickem;
+			sourceTree = "<group>";
+		};
+		FC40902E1F76A8D000DBA4F9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FC4090321F76ADFA00DBA4F9 /* ViewControllers */,
+				FC40902F1F76A8D800DBA4F9 /* TabBarController */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FC40902F1F76A8D800DBA4F9 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				FC4090301F76A8F100DBA4F9 /* TabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		FC4090321F76ADFA00DBA4F9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC4090331F76AE0B00DBA4F9 /* PickemViewControllers */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FC4090331F76AE0B00DBA4F9 /* PickemViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC4090341F76AE2000DBA4F9 /* PickemViewController.swift */,
+			);
+			path = PickemViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +160,6 @@
 			files = (
 				FC4090271F76A81F00DBA4F9 /* LaunchScreen.storyboard in Resources */,
 				FC4090241F76A81F00DBA4F9 /* Assets.xcassets in Resources */,
-				FC4090221F76A81F00DBA4F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +170,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC4090311F76A8F100DBA4F9 /* TabBarController.swift in Sources */,
+				FC4090351F76AE2000DBA4F9 /* PickemViewController.swift in Sources */,
 				FC40901F1F76A81F00DBA4F9 /* ViewController.swift in Sources */,
 				FC40901D1F76A81F00DBA4F9 /* AppDelegate.swift in Sources */,
 			);
@@ -144,14 +180,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FC4090201F76A81F00DBA4F9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC4090211F76A81F00DBA4F9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FC4090251F76A81F00DBA4F9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
