@@ -21,6 +21,7 @@ class PickemViewController: UIViewController, KolodaViewDelegate, KolodaViewData
     fileprivate let containerView = UIView()
     fileprivate let progressBarContainerView = UIView()
     fileprivate let progressBarView = UIView()
+    fileprivate let feedBackGenerator = UINotificationFeedbackGenerator()
     
     fileprivate var dataSource: [Game] = GameGenerator.create()
     fileprivate var currentGame: Game? = nil
@@ -41,6 +42,8 @@ class PickemViewController: UIViewController, KolodaViewDelegate, KolodaViewData
     }
     
     private func setUpView() {
+        feedBackGenerator.prepare()
+        
         view.addSubview(containerView)
         containerView.addSubview(kolodaView)
 
@@ -123,6 +126,8 @@ extension PickemViewController {
 
 extension PickemViewController {
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
+        feedBackGenerator.notificationOccurred(.success)
+        
         UIView.animate(withDuration: 0.25) { [weak self] in
             self?.containerView.backgroundColor = .white
         }

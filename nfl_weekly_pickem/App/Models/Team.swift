@@ -9,11 +9,20 @@
 import Foundation
 import UIKit
 
-enum Team {
+enum Team: String {
     case saints
     case panthers
     case giants
     case eagles
+    case steelers
+    case bears
+    case doliphins
+    case jets
+    
+    case bengals
+    case packers
+    case chiefs
+    case chargers
     
     var city: String {
         switch self {
@@ -21,16 +30,17 @@ enum Team {
         case .panthers: return "Carolina"
         case .giants: return "New York"
         case .eagles: return "Philadelphia"
+        case .steelers: return "Pittsburgh"
+        case .bears: return " Chicago"
+        case .doliphins: return "Miami"
+        case .jets: return "New York"
+        case .chiefs: return "Kansas City"
+        case .chargers: return "Los Angeles"
         }
     }
     
     var name: String {
-        switch self {
-        case .saints: return "Saints"
-        case .panthers: return "Panthers"
-        case .giants: return "Giants"
-        case .eagles: return "Eagles"
-        }
+        return self.rawValue.capitalized
     }
     
     var logo: UIImage {
@@ -39,6 +49,10 @@ enum Team {
         case .panthers: return UIImage(named: "panthers_logo")!
         case .giants: return UIImage(named: "giants_logo")!
         case .eagles: return UIImage(named: "eagles_logo")!
+        case .steelers: return UIImage(named: "steelers_logo")!
+        case .bears: return UIImage(named: "bears_logo")!
+        case .doliphins: return UIImage(named: "doliphins_logo")!
+        case .jets: return UIImage(named: "jets_logo")!
         }
     }
     
@@ -48,6 +62,10 @@ enum Team {
         case .panthers: return .panthersPrimary
         case .giants: return .giantsPrimary
         case .eagles: return .eaglesPrimary
+        case .steelers: return .steelersPrimary
+        case .bears: return .bearsPrimary
+        case .doliphins: return .doliphinsPrimary
+        case .jets: return .jetsPrimary
         }
     }
 }
