@@ -32,18 +32,18 @@ class Game {
 class GameGenerator {
     static func create() -> [Game] {
         // one
-        let giantStats = TeamStat(spread: "+6", record: "0-2", recordATS: "0-2", lastTenRecord: "0-2")
-        let eagleStats = TeamStat(spread: "-6", record: "1-1", recordATS: "1-1", lastTenRecord: "1-1")
+        let giantStats = TeamStat(spread: "+6", record: "0-2 (0 - 1 Road)", recordATS: "0-2 (0 - 1 Road)", lastTenRecord: "0-2 (0 - 2 ATS)")
+        let eagleStats = TeamStat(spread: "-6", record: "1-1 (0 - 0 Home)", recordATS: "1-1 (0 - 0 Home)", lastTenRecord: "1-1 (1 - 1 ATS)")
         let gameInfo1 = GameInfo(gameTime: "1:00 PM ET", gameTitle: "N.Y Giants at Philadelphia")
         let game1 = Game(awayTeam: .giants, homeTeam: .eagles, awayTeamStat: giantStats, homeTeamStat: eagleStats, gameInfo: gameInfo1)
         
         // two
-        let noStats = TeamStat(spread: "-5.5", record: "0-2", recordATS: "0-2", lastTenRecord: "0-2")
-        let pantherStats = TeamStat(spread: "+5.5", record: "2-1", recordATS: "1-1", lastTenRecord: "2-0")
+        let noStats = TeamStat(spread: "-5.5", record: "0-2 (0 - 1 Road)", recordATS: "0-2 (0 - 1 Road)", lastTenRecord: "0-2 (0 - 2 ATS)")
+        let pantherStats = TeamStat(spread: "+5.5", record: "2-0 (1 - 0 Home)", recordATS: "1-1 (0 - 1 Home)", lastTenRecord: "2-0 (1 - 1 ATS)")
         let gameInfo2 = GameInfo(gameTime: "1:00 PM ET", gameTitle: "New Orleans at Carolina")
         let game2 = Game(awayTeam: .saints, homeTeam: .panthers, awayTeamStat: noStats, homeTeamStat: pantherStats, gameInfo: gameInfo2)
         
-        return [game1, game2]
+        return [game1, game2, game1, game2, game1, game2]
         
     }
 }

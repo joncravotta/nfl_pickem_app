@@ -23,6 +23,10 @@
 		FC4090271F76A81F00DBA4F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4090251F76A81F00DBA4F9 /* LaunchScreen.storyboard */; };
 		FC4090311F76A8F100DBA4F9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4090301F76A8F100DBA4F9 /* TabBarController.swift */; };
 		FC4090351F76AE2000DBA4F9 /* PickemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4090341F76AE2000DBA4F9 /* PickemViewController.swift */; };
+		FC4271DE1F76EF74007BB1CA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4271DD1F76EF74007BB1CA /* UIColor.swift */; };
+		FC4271E01F76F1AA007BB1CA /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4271DF1F76F1AA007BB1CA /* Font.swift */; };
+		FC4271E21F76F3B0007BB1CA /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4271E11F76F3B0007BB1CA /* UIView.swift */; };
+		FC4271E41F76FB19007BB1CA /* PickemOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4271E31F76FB19007BB1CA /* PickemOverlayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		FC4090281F76A81F00DBA4F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC4090301F76A8F100DBA4F9 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FC4090341F76AE2000DBA4F9 /* PickemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickemViewController.swift; sourceTree = "<group>"; };
+		FC4271DD1F76EF74007BB1CA /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		FC4271DF1F76F1AA007BB1CA /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		FC4271E11F76F3B0007BB1CA /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		FC4271E31F76FB19007BB1CA /* PickemOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickemOverlayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				FC0A135F1F76C11C00AB2965 /* Array.swift */,
+				FC4271DD1F76EF74007BB1CA /* UIColor.swift */,
+				FC4271DF1F76F1AA007BB1CA /* Font.swift */,
+				FC4271E11F76F3B0007BB1CA /* UIView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -103,6 +114,7 @@
 				FC0A13641F76CBBF00AB2965 /* PickemTeamInfoView.swift */,
 				FC0A136C1F76E9BE00AB2965 /* PickemBottomInfoView.swift */,
 				FC0A136E1F76EB5B00AB2965 /* AtCircleView.swift */,
+				FC4271E31F76FB19007BB1CA /* PickemOverlayView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -306,7 +318,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC4271E21F76F3B0007BB1CA /* UIView.swift in Sources */,
 				FC0A13671F76D33700AB2965 /* Team.swift in Sources */,
+				FC4271DE1F76EF74007BB1CA /* UIColor.swift in Sources */,
+				FC4271E41F76FB19007BB1CA /* PickemOverlayView.swift in Sources */,
+				FC4271E01F76F1AA007BB1CA /* Font.swift in Sources */,
 				FC4090311F76A8F100DBA4F9 /* TabBarController.swift in Sources */,
 				FC0A13691F76D6BD00AB2965 /* TeamStat.swift in Sources */,
 				FC4090351F76AE2000DBA4F9 /* PickemViewController.swift in Sources */,

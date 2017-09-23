@@ -17,7 +17,7 @@ class PickemKolodaView: UIView {
     let dividerHorizontalView = UIView()
     let awayTeamView = PickemTeamInfoView()
     let homeTeamView = PickemTeamInfoView()
-    let bottomInfoView = UIView()
+    let bottomInfoView = PickemBottomInfoView()
     
     var game: Game? = nil {
         didSet {
@@ -31,6 +31,16 @@ class PickemKolodaView: UIView {
             awayTeamView.spreadPercentageLabelString = game.awayTeamStat.spread
             homeTeamView.spreadPercentageLabelString = game.homeTeamStat.spread
             
+            awayTeamView.recordLabelString        = game.awayTeamStat.record
+            awayTeamView.atsRecordLabelString     = game.awayTeamStat.recordATS
+            awayTeamView.lastTenRecordLabelString = game.awayTeamStat.lastTenRecord
+            
+            homeTeamView.recordLabelString        = game.homeTeamStat.record
+            homeTeamView.atsRecordLabelString     = game.homeTeamStat.recordATS
+            homeTeamView.lastTenRecordLabelString = game.homeTeamStat.lastTenRecord
+            
+            bottomInfoView.gameTitleString = game.gameInfo.gameTitle
+            bottomInfoView.timeLabelString = game.gameInfo.gameTime
         }
     }
     
@@ -42,15 +52,13 @@ class PickemKolodaView: UIView {
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
     private func setUpView() {
-        
+        setShadow()
         addSubview(containerView)
         containerView.backgroundColor = .white
         containerView.layer.cornerRadius = 8
-        containerView.layer.borderWidth = 1
-        containerView.layer.borderColor = UIColor.lightGray.cgColor
-        dividerHorizontalView.backgroundColor = .lightGray
-        dividerVerticalView.backgroundColor = .lightGray
-        
+        containerView.clipsToBounds = true
+        dividerHorizontalView.backgroundColor = .nflLightGray
+        dividerVerticalView.backgroundColor = .nflLightGray
         
         containerView.addSubview(awayTeamView)
         containerView.addSubview(homeTeamView)

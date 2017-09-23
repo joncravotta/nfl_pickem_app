@@ -41,6 +41,15 @@ enum Team {
         case .eagles: return UIImage(named: "eagles_logo")!
         }
     }
+    
+    var primaryColor: UIColor {
+        switch self {
+        case .saints: return .saintsPrimary
+        case .panthers: return .panthersPrimary
+        case .giants: return .giantsPrimary
+        case .eagles: return .eaglesPrimary
+        }
+    }
 }
 
 

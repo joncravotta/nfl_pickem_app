@@ -13,6 +13,7 @@ class AtCircleView: UIView {
     
     private let circle = UIView()
     private let atLabel = UILabel()
+    private let circleSize = 26
     
     init() {
         super.init(frame: .zero)
@@ -25,9 +26,22 @@ class AtCircleView: UIView {
         addSubview(circle)
         circle.addSubview(atLabel)
         
+        atLabel.text = "AT"
+        atLabel.font = UIFont.font(withType: .bold, withSize: 9)
+        atLabel.textColor = .white
+        atLabel.textAlignment = .center
+        circle.backgroundColor = .nflDarkGreen
+        circle.layer.cornerRadius = CGFloat(circleSize / 2)
         
         circle.snp.makeConstraints { (make) in
-            <#code#>
+            make.width.equalTo(circleSize)
+            make.height.equalTo(circleSize)
+            make.center.equalToSuperview()
+        }
+        
+        atLabel.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+            make.width.equalToSuperview()
         }
     }
 }

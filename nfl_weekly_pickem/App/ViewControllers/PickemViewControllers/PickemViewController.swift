@@ -18,10 +18,16 @@ private struct Layout {
 class PickemViewController: UIViewController, KolodaViewDelegate, KolodaViewDataSource {
     
     var kolodaView: KolodaView = KolodaView()
+    fileprivate let containerView = UIView()
+    fileprivate let progressBarContainerView = UIView()
+    fileprivate let progressBarView = UIView()
+    
     fileprivate var dataSource: [Game] = GameGenerator.create()
+    fileprivate var currentGame: Game? = nil
     
     init() {
         super.init(nibName: nil, bundle: nil)
+        currentGame = dataSource[0]
     }
     
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
@@ -35,14 +41,52 @@ class PickemViewController: UIViewController, KolodaViewDelegate, KolodaViewData
     }
     
     private func setUpView() {
-        view.addSubview(kolodaView)
+        view.addSubview(containerView)
+        containerView.addSubview(kolodaView)
 
+        view.backgroundColor = .white
+        containerView.backgroundColor = .white
+        containerView.snp.makeConstraints({ $0.edges.equalToSuperview() })
+        
         kolodaView.snp.makeConstraints { (make) in
             make.height.equalTo(500)
             make.width.equalTo(300)
             make.center.equalToSuperview()
         }
         view.backgroundColor = .white
+        
+        setUpProgressBar()
+    }
+    
+    private func setUpProgressBar() {
+        containerView.addSubview(progressBarContainerView)
+        
+        progressBarContainerView.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(20)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(15)
+        }
+        
+        progressBarContainerView.addSubview(progressBarView)
+        progressBarView.backgroundColor = .nflSeaGreen
+        
+        progressBarView.snp.makeConstraints { (make) in
+            make.width.equalTo(0)
+            make.leading.top.bottom.equalTo(progressBarContainerView)
+            make.height.equalTo(progressBarContainerView)
+        }
+    }
+    
+    fileprivate func updateProgressBar(for index: Int) {
+        let width = (CGFloat(index + 1) / CGFloat(dataSource.count)) * progressBarContainerView.frame.width
+        
+        progressBarView.snp.updateConstraints { (make) in
+            make.width.equalTo(width)
+        }
+        
+        UIView.animate(withDuration: 0.2) {
+            self.view.layoutIfNeeded()
+        }
     }
 }
 
@@ -66,14 +110,56 @@ extension PickemViewController {
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        
         let view = PickemKolodaView()
         let gameInfo = dataSource[index]
         view.game = gameInfo
         return view
     }
     
+    func koloda(_ koloda: KolodaView, didShowCardAt index: Int) {
+        currentGame = dataSource[index]
+    }
+}
+
+extension PickemViewController {
+    func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
+        UIView.animate(withDuration: 0.25) { [weak self] in
+            self?.containerView.backgroundColor = .white
+        }
+        updateProgressBar(for: index)
+    }
+    
+    func koloda(_ koloda: KolodaView, draggedCardWithPercentage finishPercentage: CGFloat, in direction: SwipeResultDirection) {
+        if finishPercentage == 0.0 {
+            containerView.backgroundColor = .white
+        }
+        
+        let colorPercentage = finishPercentage / 100
+        
+        switch direction {
+        case .left, .topLeft, .bottomLeft: containerView.backgroundColor = currentGame?.awayTeam.primaryColor.withAlphaComponent(colorPercentage)
+        case .right, .topRight, .bottomRight: containerView.backgroundColor = currentGame?.homeTeam.primaryColor.withAlphaComponent(colorPercentage)
+        default: containerView.backgroundColor = .white
+        }
+
+    }
+    
+    func kolodaDidResetCard(_ koloda: KolodaView) {
+        UIView.animate(withDuration: 0.25) { [weak self] in
+            self?.containerView.backgroundColor = .white
+        }
+    }
+    
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
+//        print(currentSwipeDirection)
+//        let game = dataSource[index]
+//        switch currentSwipeDirection {
+//        case .left, .topLeft, .bottomLeft: return PickemOverlayView(with: game.awayTeam)
+//        case.right, .topRight, .bottomRight: return PickemOverlayView(with: game.homeTeam)
+//        default: return nil
+//        }
         return nil
     }
 }
+
+
