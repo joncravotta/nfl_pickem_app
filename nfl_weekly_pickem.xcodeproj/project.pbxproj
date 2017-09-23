@@ -19,6 +19,8 @@
 		FC0A136F1F76EB5B00AB2965 /* AtCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A136E1F76EB5B00AB2965 /* AtCircleView.swift */; };
 		FC3E1C981F771E9A00EBCCAF /* KolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3E1C971F771E9A00EBCCAF /* KolodaView.swift */; };
 		FC3E1C9A1F771ED500EBCCAF /* CustomKolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3E1C991F771ED500EBCCAF /* CustomKolodaView.swift */; };
+		FC3E1C9D1F77233600EBCCAF /* PickemModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3E1C9C1F77233600EBCCAF /* PickemModelController.swift */; };
+		FC3E1C9F1F77290C00EBCCAF /* PickemEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3E1C9E1F77290C00EBCCAF /* PickemEditViewController.swift */; };
 		FC40901D1F76A81F00DBA4F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40901C1F76A81F00DBA4F9 /* AppDelegate.swift */; };
 		FC40901F1F76A81F00DBA4F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40901E1F76A81F00DBA4F9 /* ViewController.swift */; };
 		FC4090241F76A81F00DBA4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC4090231F76A81F00DBA4F9 /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		FC0A136E1F76EB5B00AB2965 /* AtCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtCircleView.swift; sourceTree = "<group>"; };
 		FC3E1C971F771E9A00EBCCAF /* KolodaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KolodaView.swift; sourceTree = "<group>"; };
 		FC3E1C991F771ED500EBCCAF /* CustomKolodaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKolodaView.swift; sourceTree = "<group>"; };
+		FC3E1C9C1F77233600EBCCAF /* PickemModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickemModelController.swift; sourceTree = "<group>"; };
+		FC3E1C9E1F77290C00EBCCAF /* PickemEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickemEditViewController.swift; sourceTree = "<group>"; };
 		FC4090191F76A81F00DBA4F9 /* nfl_weekly_pickem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nfl_weekly_pickem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC40901C1F76A81F00DBA4F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC40901E1F76A81F00DBA4F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +129,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		FC3E1C9B1F77231800EBCCAF /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC3E1C9C1F77233600EBCCAF /* PickemModelController.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
 		FC4090101F76A81F00DBA4F9 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +171,7 @@
 		FC40902E1F76A8D000DBA4F9 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				FC3E1C9B1F77231800EBCCAF /* ModelControllers */,
 				FC0A13611F76CA9700AB2965 /* Views */,
 				FC0A135E1F76C10F00AB2965 /* Extension */,
 				FC0A135B1F76BA1200AB2965 /* Models */,
@@ -188,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				FC4090341F76AE2000DBA4F9 /* PickemViewController.swift */,
+				FC3E1C9E1F77290C00EBCCAF /* PickemEditViewController.swift */,
 			);
 			path = PickemViewControllers;
 			sourceTree = "<group>";
@@ -336,10 +350,12 @@
 				FC0A13631F76CAA800AB2965 /* PickemKolodaView.swift in Sources */,
 				FC0A136F1F76EB5B00AB2965 /* AtCircleView.swift in Sources */,
 				FC0A136D1F76E9BE00AB2965 /* PickemBottomInfoView.swift in Sources */,
+				FC3E1C9D1F77233600EBCCAF /* PickemModelController.swift in Sources */,
 				FC3E1C9A1F771ED500EBCCAF /* CustomKolodaView.swift in Sources */,
 				FC40901F1F76A81F00DBA4F9 /* ViewController.swift in Sources */,
 				FC0A13601F76C11C00AB2965 /* Array.swift in Sources */,
 				FC3E1C981F771E9A00EBCCAF /* KolodaView.swift in Sources */,
+				FC3E1C9F1F77290C00EBCCAF /* PickemEditViewController.swift in Sources */,
 				FC0A136B1F76D76700AB2965 /* GameInfo.swift in Sources */,
 				FC0A135D1F76BA2200AB2965 /* Game.swift in Sources */,
 				FC40901D1F76A81F00DBA4F9 /* AppDelegate.swift in Sources */,

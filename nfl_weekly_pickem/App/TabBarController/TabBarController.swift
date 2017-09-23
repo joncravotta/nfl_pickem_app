@@ -16,7 +16,8 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     private func setUpView() {
-        let vc1 = PickemViewController()
+        let mc = PickemModelController()
+        let vc1 = PickemViewController(mc: mc)
         vc1.tabBarItem = UITabBarItem(title: "one", image: nil, tag: 0)
         let vc2 = UIViewController()
         vc2.tabBarItem = UITabBarItem(title: "two", image: nil, tag: 1)

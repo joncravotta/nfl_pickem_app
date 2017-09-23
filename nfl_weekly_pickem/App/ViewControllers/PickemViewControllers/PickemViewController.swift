@@ -23,7 +23,10 @@ class PickemViewController: UIViewController, KolodaViewDelegate, KolodaViewData
     fileprivate var dataSource: [Game] = GameGenerator.create()
     fileprivate var currentGame: Game? = nil
     
-    init() {
+    fileprivate let mc: PickemModelController
+    
+    init(mc: PickemModelController) {
+        self.mc = mc
         super.init(nibName: nil, bundle: nil)
         currentGame = dataSource[0]
     }
@@ -129,6 +132,18 @@ extension PickemViewController {
             self?.containerView.backgroundColor = .white
         }
         updateProgressBar(for: index)
+        
+        let game = dataSource[index]
+        
+        var pick: Team {
+            switch direction {
+            case .left, .topLeft, .bottomLeft: return game.awayTeam
+            case .right, .topRight, .bottomRight: return game.homeTeam
+            default: return game.homeTeam
+            }
+        }
+        
+        mc.addPick(for: game, picked: pick)
     }
     
     func koloda(_ koloda: KolodaView, draggedCardWithPercentage finishPercentage: CGFloat, in direction: SwipeResultDirection) {
