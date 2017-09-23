@@ -17,6 +17,8 @@
 		FC0A136B1F76D76700AB2965 /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A136A1F76D76700AB2965 /* GameInfo.swift */; };
 		FC0A136D1F76E9BE00AB2965 /* PickemBottomInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A136C1F76E9BE00AB2965 /* PickemBottomInfoView.swift */; };
 		FC0A136F1F76EB5B00AB2965 /* AtCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A136E1F76EB5B00AB2965 /* AtCircleView.swift */; };
+		FC3E1C981F771E9A00EBCCAF /* KolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3E1C971F771E9A00EBCCAF /* KolodaView.swift */; };
+		FC3E1C9A1F771ED500EBCCAF /* CustomKolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3E1C991F771ED500EBCCAF /* CustomKolodaView.swift */; };
 		FC40901D1F76A81F00DBA4F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40901C1F76A81F00DBA4F9 /* AppDelegate.swift */; };
 		FC40901F1F76A81F00DBA4F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40901E1F76A81F00DBA4F9 /* ViewController.swift */; };
 		FC4090241F76A81F00DBA4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC4090231F76A81F00DBA4F9 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 		FC0A136A1F76D76700AB2965 /* GameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfo.swift; sourceTree = "<group>"; };
 		FC0A136C1F76E9BE00AB2965 /* PickemBottomInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickemBottomInfoView.swift; sourceTree = "<group>"; };
 		FC0A136E1F76EB5B00AB2965 /* AtCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtCircleView.swift; sourceTree = "<group>"; };
+		FC3E1C971F771E9A00EBCCAF /* KolodaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KolodaView.swift; sourceTree = "<group>"; };
+		FC3E1C991F771ED500EBCCAF /* CustomKolodaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKolodaView.swift; sourceTree = "<group>"; };
 		FC4090191F76A81F00DBA4F9 /* nfl_weekly_pickem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nfl_weekly_pickem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC40901C1F76A81F00DBA4F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC40901E1F76A81F00DBA4F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 				FC4271DD1F76EF74007BB1CA /* UIColor.swift */,
 				FC4271DF1F76F1AA007BB1CA /* Font.swift */,
 				FC4271E11F76F3B0007BB1CA /* UIView.swift */,
+				FC3E1C971F771E9A00EBCCAF /* KolodaView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 				FC0A136C1F76E9BE00AB2965 /* PickemBottomInfoView.swift */,
 				FC0A136E1F76EB5B00AB2965 /* AtCircleView.swift */,
 				FC4271E31F76FB19007BB1CA /* PickemOverlayView.swift */,
+				FC3E1C991F771ED500EBCCAF /* CustomKolodaView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -330,8 +336,10 @@
 				FC0A13631F76CAA800AB2965 /* PickemKolodaView.swift in Sources */,
 				FC0A136F1F76EB5B00AB2965 /* AtCircleView.swift in Sources */,
 				FC0A136D1F76E9BE00AB2965 /* PickemBottomInfoView.swift in Sources */,
+				FC3E1C9A1F771ED500EBCCAF /* CustomKolodaView.swift in Sources */,
 				FC40901F1F76A81F00DBA4F9 /* ViewController.swift in Sources */,
 				FC0A13601F76C11C00AB2965 /* Array.swift in Sources */,
+				FC3E1C981F771E9A00EBCCAF /* KolodaView.swift in Sources */,
 				FC0A136B1F76D76700AB2965 /* GameInfo.swift in Sources */,
 				FC0A135D1F76BA2200AB2965 /* Game.swift in Sources */,
 				FC40901D1F76A81F00DBA4F9 /* AppDelegate.swift in Sources */,

@@ -34,6 +34,8 @@ enum Team: String {
         case .bears: return " Chicago"
         case .doliphins: return "Miami"
         case .jets: return "New York"
+        case .bengals: return "Cincinnati"
+        case .packers: return "Green Bay"
         case .chiefs: return "Kansas City"
         case .chargers: return "Los Angeles"
         }
@@ -44,16 +46,7 @@ enum Team: String {
     }
     
     var logo: UIImage {
-        switch self {
-        case .saints: return UIImage(named: "saints_logo")!
-        case .panthers: return UIImage(named: "panthers_logo")!
-        case .giants: return UIImage(named: "giants_logo")!
-        case .eagles: return UIImage(named: "eagles_logo")!
-        case .steelers: return UIImage(named: "steelers_logo")!
-        case .bears: return UIImage(named: "bears_logo")!
-        case .doliphins: return UIImage(named: "doliphins_logo")!
-        case .jets: return UIImage(named: "jets_logo")!
-        }
+        return UIImage(named: "\(name.lowercased())_logo")!
     }
     
     var primaryColor: UIColor {
@@ -66,6 +59,10 @@ enum Team: String {
         case .bears: return .bearsPrimary
         case .doliphins: return .doliphinsPrimary
         case .jets: return .jetsPrimary
+        case .bengals: return .bengalsPrimary
+        case .packers: return .packersPrimary
+        case .chiefs: return .chiefsPrimary
+        case .chargers: return .chargersPrimary
         }
     }
 }

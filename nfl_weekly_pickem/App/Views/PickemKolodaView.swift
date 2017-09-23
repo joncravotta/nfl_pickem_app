@@ -70,8 +70,8 @@ class PickemKolodaView: UIView {
     
     private func setUpConstraints() {
         containerView.snp.makeConstraints { (make) in
-            make.width.equalTo(370)
-            make.height.equalTo(545)
+            make.height.equalToSuperview().multipliedBy(0.7)
+            make.width.equalToSuperview().multipliedBy(0.9)
             make.center.equalToSuperview()
         }
         

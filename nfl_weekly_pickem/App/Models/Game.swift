@@ -51,7 +51,15 @@ class GameGenerator {
         let gameInfo4 = GameInfo(gameTime: "1:00 PM ET", gameTitle: "Miami at N.Y. Jets")
         let game4 = Game(awayTeam: .doliphins, homeTeam: .jets, awayTeamStat: noStats, homeTeamStat: pantherStats, gameInfo: gameInfo4)
         
-        return [game1, game2, game3, game4]
+        // five
+        let gameInfo5 = GameInfo(gameTime: "4:25 PM ET", gameTitle: "Cincinnati at Green Bay")
+        let game5 = Game(awayTeam: .bengals, homeTeam: .packers, awayTeamStat: noStats, homeTeamStat: pantherStats, gameInfo: gameInfo5)
+        
+        // six
+        let gameInfo6 = GameInfo(gameTime: "4:25 PM ET", gameTitle: "Kansas City at L.A. Chargers")
+        let game6 = Game(awayTeam: .chiefs, homeTeam: .chargers, awayTeamStat: noStats, homeTeamStat: pantherStats, gameInfo: gameInfo6)
+        
+        return [game1, game2, game3, game4, game5, game6]
         
     }
 }

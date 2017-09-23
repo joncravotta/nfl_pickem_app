@@ -22,6 +22,10 @@ extension UIColor {
     public class var bearsPrimary:UIColor { return UIColor.color(withRed:5,  green:28,  blue:44) }
     public class var doliphinsPrimary:UIColor { return UIColor.color(withRed:0,  green:142,  blue:151) }
     public class var jetsPrimary:UIColor { return UIColor.color(withRed:12,  green:55,  blue:29) }
+    public class var bengalsPrimary:UIColor { return UIColor.color(withRed:252,  green:72,  blue:2) }
+    public class var packersPrimary:UIColor { return UIColor.color(withRed:23,  green:94,  blue:34) }
+    public class var chiefsPrimary:UIColor { return UIColor.color(withRed:200,  green:16,  blue:46) }
+    public class var chargersPrimary:UIColor { return UIColor.color(withRed:12,  green:35,  blue:64) }
     
     fileprivate class func color(withRed red:CGFloat, green:CGFloat, blue:CGFloat, alpha:CGFloat = 1) -> UIColor {
         return UIColor(red:red/255.0, green:green/255.0, blue: blue/255.0, alpha:alpha)
