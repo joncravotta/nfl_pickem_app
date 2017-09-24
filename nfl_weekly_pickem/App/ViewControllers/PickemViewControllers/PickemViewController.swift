@@ -137,15 +137,14 @@ extension PickemViewController {
         
         let game = dataSource[index]
         
-        var pick: Team {
-            switch direction {
-            case .left, .topLeft, .bottomLeft: return game.awayTeam
-            case .right, .topRight, .bottomRight: return game.homeTeam
-            default: return game.homeTeam
-            }
+        switch direction {
+        case .left, .topLeft, .bottomLeft: mc.addPick(for: game, picked: game.awayTeam, homeOrAway: .away)
+            
+        case .right, .topRight, .bottomRight: mc.addPick(for: game, picked: game.homeTeam, homeOrAway: .home)
+        default: return mc.addPick(for: game, picked: game.homeTeam, homeOrAway: .home)
         }
         
-        mc.addPick(for: game, picked: pick)
+        
     }
     
     func koloda(_ koloda: KolodaView, draggedCardWithPercentage finishPercentage: CGFloat, in direction: SwipeResultDirection) {

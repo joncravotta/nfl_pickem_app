@@ -11,14 +11,22 @@ import UIKit
 
 class PickemEditTableViewCell: UITableViewCell {
     
-    private let awayTeamView = PickemEditTeamViewCell(alignment: .left)
-    private let homeTeamView = PickemEditTeamViewCell(alignment: .right)
+    private let containerView = UIView()
+    private let awayTeamView = PickemEditTeamView(alignment: .left)
+    private let homeTeamView = PickemEditTeamView(alignment: .right)
+    private let divider = UIView()
+    fileprivate let feedBackGenerator = UINotificationFeedbackGenerator()
     
-    var game: Game? = nil {
+    var pick: Pick? = nil {
         didSet {
-            guard let game = game else { return }
-            awayTeamView.teamInfo = (team: game.awayTeam, stats: game.awayTeamStat)
-            homeTeamView.teamInfo = (team: game.homeTeam, stats: game.homeTeamStat)
+            guard let pick = pick else { return }
+            awayTeamView.teamInfo = (team: pick.game.awayTeam, stats: pick.game.awayTeamStat)
+            homeTeamView.teamInfo = (team: pick.game.homeTeam, stats: pick.game.homeTeamStat)
+            
+            switch pick.homeOrAway {
+            case .home: homeTeamSelected()
+            case .away: awayTeamSelected()
+            }
         }
     }
     
@@ -30,18 +38,67 @@ class PickemEditTableViewCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
     private func setUpView() {
-        addSubview(awayTeamView)
-        addSubview(homeTeamView)
+        self.selectionStyle = .none
+        feedBackGenerator.prepare()
+        
+        addSubview(containerView)
+        containerView.addSubview(awayTeamView)
+        containerView.addSubview(homeTeamView)
+        containerView.addSubview(divider)
+        containerView.setCellShadow()
+        
+        containerView.backgroundColor = .white
+        self.backgroundColor = .white
+        
+        let homeTapGesture = UITapGestureRecognizer(target: self, action: #selector(tappedHomeTeam))
+        let awayTapGesture = UITapGestureRecognizer(target: self, action: #selector(tappedAwayTeam))
+        
+        homeTeamView.addGestureRecognizer(homeTapGesture)
+        awayTeamView.addGestureRecognizer(awayTapGesture)
+        
+        divider.backgroundColor = .white
+        
+       
+        
+        containerView.snp.makeConstraints { (make) in
+            make.leading.trailing.centerX.centerY.equalToSuperview()
+            make.height.equalToSuperview().multipliedBy(0.85)
+        }
+        
+        divider.snp.makeConstraints { (make) in
+            make.height.equalToSuperview()
+            make.width.equalTo(1)
+            make.center.equalToSuperview()
+        }
         
         awayTeamView.snp.makeConstraints { (make) in
             make.top.bottom.leading.equalToSuperview()
-            make.width.equalToSuperview().multipliedBy(0.5)
+            make.trailing.equalTo(divider.snp.leading)
         }
         
         homeTeamView.snp.makeConstraints { (make) in
             make.top.bottom.trailing.equalToSuperview()
-            make.width.equalToSuperview().multipliedBy(0.5)
+            make.leading.equalTo(divider.snp.trailing)
         }
     }
     
+    func tappedHomeTeam() {
+        feedBackGenerator.notificationOccurred(.success)
+        homeTeamSelected()
+    }
+    
+    func tappedAwayTeam() {
+        feedBackGenerator.notificationOccurred(.success)
+        awayTeamSelected()
+    }
+    
+    private func homeTeamSelected() {
+        homeTeamView.isSelected = true
+        awayTeamView.isSelected = false
+    }
+    
+    private func awayTeamSelected() {
+        homeTeamView.isSelected = false
+        awayTeamView.isSelected = true
+    }
 }

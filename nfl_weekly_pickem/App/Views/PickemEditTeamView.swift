@@ -11,7 +11,7 @@ import UIKit
 
 
 
-class PickemEditTeamViewCell: UIView {
+class PickemEditTeamView: UIView {
     
     var teamInfo: (team: Team, stats: TeamStat)? = nil {
         didSet {
@@ -25,7 +25,7 @@ class PickemEditTeamViewCell: UIView {
     
     var isSelected: Bool = false {
         didSet {
-            
+            toggleColors()
         }
     }
     
@@ -34,6 +34,7 @@ class PickemEditTeamViewCell: UIView {
     private let spreadLabel = UILabel()
     private let recordLabel = UILabel()
     private let teamLogoImageView = UIImageView()
+    private let selectedView = UIView()
     private let alignment: Alignment
     
     init(alignment: Alignment) {
@@ -49,10 +50,17 @@ class PickemEditTeamViewCell: UIView {
         addSubview(spreadLabel)
         addSubview(recordLabel)
         addSubview(teamLogoImageView)
+        addSubview(selectedView)
+        
+        toggleColors()
         
         nameLabel.font = UIFont.font(withType: .bold, withSize: 18)
         spreadLabel.font = UIFont.font(withType: .boldItalic, withSize: 14)
         recordLabel.font = UIFont.font(withType: .regular, withSize: 10)
+        
+        nameLabel.textColor = .nflDarkGray
+        spreadLabel.textColor = .nflDarkGray
+        recordLabel.textColor = .nflDarkGray
         
         switch alignment {
         case .left:
@@ -66,6 +74,10 @@ class PickemEditTeamViewCell: UIView {
         recordLabel.textAlignment = .center
         teamLogoImageView.contentMode = .scaleAspectFit
         
+        setUpConstraints()
+    }
+    
+    private func setUpConstraints() {
         teamLogoImageView.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview().offset(-10)
             make.width.equalTo(45)
@@ -106,7 +118,21 @@ class PickemEditTeamViewCell: UIView {
                 make.trailing.equalTo(nameLabel.snp.trailing)
                 make.leading.equalToSuperview().offset(15)
             }
-  
+            
+        }
+        
+        selectedView.snp.makeConstraints { (make) in
+            
+            make.bottom.leading.trailing.equalToSuperview()
+            make.height.equalTo(5)
+        }
+    }
+    
+    private func toggleColors() {
+        if isSelected {
+           selectedView.backgroundColor = .nflSeaGreen
+        } else {
+          selectedView.backgroundColor = .white
         }
     }
 }

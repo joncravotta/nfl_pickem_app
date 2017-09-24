@@ -12,7 +12,9 @@ import UIKit
 class PickemEditViewController: UIViewController {
     fileprivate let tableView = UITableView()
     fileprivate let bottomBar = UIView()
+    fileprivate let bottomBarLabel = UILabel()
     fileprivate let mc: PickemModelController
+    fileprivate let feedBackGenerator = UINotificationFeedbackGenerator()
     
     init(mc: PickemModelController) {
         self.mc = mc
@@ -25,18 +27,30 @@ class PickemEditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Edit Picks"
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(PickemEditTableViewCell.self, forCellReuseIdentifier: "PickemEditTableViewCell")
+        tableView.separatorStyle = .none
+        tableView.contentInset = UIEdgeInsetsMake(20, 0, 20, 0)
         
+        tableView.register(PickemEditTableViewCell.self, forCellReuseIdentifier: "PickemEditTableViewCell")
         setUpView()
     }
     
     private func setUpView() {
+        feedBackGenerator.prepare()
         view.addSubview(tableView)
         view.addSubview(bottomBar)
         bottomBar.backgroundColor = .nflDarkGray
+        
+        bottomBar.addSubview(bottomBarLabel)
+        bottomBarLabel.textColor = .white
+        bottomBarLabel.text = "SUBMIT"
+        bottomBarLabel.font = UIFont.font(withType: .bold, withSize: 18)
+        bottomBarLabel.textAlignment = .center
+        
+        let bottomBarGesture = UITapGestureRecognizer(target: self, action: #selector(submit))
+        bottomBar.addGestureRecognizer(bottomBarGesture)
         
         tableView.snp.makeConstraints { (make) in
             make.top.leading.trailing.equalToSuperview()
@@ -45,9 +59,18 @@ class PickemEditViewController: UIViewController {
         
         bottomBar.snp.makeConstraints { (make) in
             make.width.centerX.equalToSuperview()
-            make.height.equalTo(50)
+            make.height.equalTo(60)
             make.bottom.equalToSuperview().offset(-49)
         }
+        
+        bottomBarLabel.snp.makeConstraints { (make) in
+            make.edges.centerX.equalToSuperview()
+        }
+    }
+    
+    func submit() {
+        feedBackGenerator.notificationOccurred(.success)
+        navigationController?.pushViewController(UIViewController(), animated: true)
     }
 }
 
@@ -62,12 +85,12 @@ extension PickemEditViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:PickemEditTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PickemEditTableViewCell") as! PickemEditTableViewCell
-        cell.game = mc.picks[indexPath.row].game
+        cell.pick = mc.picks[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 85
+        return 100
     }
 }
 

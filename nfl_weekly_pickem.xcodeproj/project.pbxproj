@@ -33,6 +33,7 @@
 		FC4271E41F76FB19007BB1CA /* PickemOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4271E31F76FB19007BB1CA /* PickemOverlayView.swift */; };
 		FCCC03901F772D2500DEF7E2 /* PickemEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC038F1F772D2500DEF7E2 /* PickemEditTableViewCell.swift */; };
 		FCCC03921F772DBB00DEF7E2 /* PickemEditTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC03911F772DBB00DEF7E2 /* PickemEditTeamView.swift */; };
+		FCCC03941F77465F00DEF7E2 /* Pick.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC03931F77465F00DEF7E2 /* Pick.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		FC4271E31F76FB19007BB1CA /* PickemOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickemOverlayView.swift; sourceTree = "<group>"; };
 		FCCC038F1F772D2500DEF7E2 /* PickemEditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickemEditTableViewCell.swift; sourceTree = "<group>"; };
 		FCCC03911F772DBB00DEF7E2 /* PickemEditTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickemEditTeamView.swift; sourceTree = "<group>"; };
+		FCCC03931F77465F00DEF7E2 /* Pick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pick.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				FC0A13661F76D33700AB2965 /* Team.swift */,
 				FC0A13681F76D6BD00AB2965 /* TeamStat.swift */,
 				FC0A136A1F76D76700AB2965 /* GameInfo.swift */,
+				FCCC03931F77465F00DEF7E2 /* Pick.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				FC0A13631F76CAA800AB2965 /* PickemKolodaView.swift in Sources */,
 				FC0A136F1F76EB5B00AB2965 /* AtCircleView.swift in Sources */,
 				FC0A136D1F76E9BE00AB2965 /* PickemBottomInfoView.swift in Sources */,
+				FCCC03941F77465F00DEF7E2 /* Pick.swift in Sources */,
 				FC3E1C9D1F77233600EBCCAF /* PickemModelController.swift in Sources */,
 				FC3E1C9A1F771ED500EBCCAF /* CustomKolodaView.swift in Sources */,
 				FC40901F1F76A81F00DBA4F9 /* ViewController.swift in Sources */,

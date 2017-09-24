@@ -8,10 +8,7 @@
 
 import Foundation
 
-struct Pick {
-    let game: Game
-    let team: Team
-}
+
 
 class PickemModelController {
     var picks:[Pick] = []
@@ -20,7 +17,7 @@ class PickemModelController {
         
     }
     
-    func addPick(for game: Game, picked team: Team) {
-        picks.append(Pick(game: game, team: team))
+    func addPick(for game: Game, picked team: Team, homeOrAway: HomeOrAway) {
+        picks.append(Pick(game: game, team: team, homeOrAway: homeOrAway))
     }
 }
