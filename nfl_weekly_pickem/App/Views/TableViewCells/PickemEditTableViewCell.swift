@@ -17,6 +17,8 @@ class PickemEditTableViewCell: UITableViewCell {
     private let divider = UIView()
     fileprivate let feedBackGenerator = UINotificationFeedbackGenerator()
     
+    var didChangePick:((Pick)->())? = nil
+    
     var pick: Pick? = nil {
         didSet {
             guard let pick = pick else { return }
@@ -85,11 +87,15 @@ class PickemEditTableViewCell: UITableViewCell {
     func tappedHomeTeam() {
         feedBackGenerator.notificationOccurred(.success)
         homeTeamSelected()
+        guard let pick = pick else { return }
+        didChangePick?(Pick(game: pick.game, team: pick.game.homeTeam, homeOrAway: .home))
     }
     
     func tappedAwayTeam() {
         feedBackGenerator.notificationOccurred(.success)
         awayTeamSelected()
+        guard let pick = pick else { return }
+        didChangePick?(Pick(game: pick.game, team: pick.game.awayTeam, homeOrAway: .away))
     }
     
     private func homeTeamSelected() {

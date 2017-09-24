@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PickemBottomInfoView: UIView {
+class PickemGameInfoView: UIView {
     
     private let gameTitleLabel = UILabel()
     private let atCircleView = AtCircleView()

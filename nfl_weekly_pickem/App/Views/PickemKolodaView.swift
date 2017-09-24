@@ -14,10 +14,8 @@ class PickemKolodaView: UIView {
     
     let containerView = UIView()
     let dividerVerticalView = UIView()
-    let dividerHorizontalView = UIView()
     let awayTeamView = PickemTeamInfoView()
     let homeTeamView = PickemTeamInfoView()
-    let bottomInfoView = PickemBottomInfoView()
     
     var game: Game? = nil {
         didSet {
@@ -38,9 +36,6 @@ class PickemKolodaView: UIView {
             homeTeamView.recordLabelString        = game.homeTeamStat.record
             homeTeamView.atsRecordLabelString     = game.homeTeamStat.recordATS
             homeTeamView.lastTenRecordLabelString = game.homeTeamStat.lastTenRecord
-            
-            bottomInfoView.gameTitleString = game.gameInfo.gameTitle
-            bottomInfoView.timeLabelString = game.gameInfo.gameTime
         }
     }
     
@@ -57,51 +52,37 @@ class PickemKolodaView: UIView {
         containerView.backgroundColor = .white
         containerView.layer.cornerRadius = 8
         containerView.clipsToBounds = true
-        dividerHorizontalView.backgroundColor = .nflLightGray
         dividerVerticalView.backgroundColor = .nflLightGray
         
         containerView.addSubview(awayTeamView)
         containerView.addSubview(homeTeamView)
-        containerView.addSubview(bottomInfoView)
         containerView.addSubview(dividerVerticalView)
-        containerView.addSubview(dividerHorizontalView)
         setUpConstraints()
     }
     
     private func setUpConstraints() {
         containerView.snp.makeConstraints { (make) in
-            make.height.equalToSuperview().multipliedBy(0.7)
+            make.height.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(0.9)
             make.center.equalToSuperview()
-        }
-        
-        bottomInfoView.snp.makeConstraints { (make) in
-            make.bottom.width.centerX.equalToSuperview()
-            make.height.equalToSuperview().multipliedBy(0.2)
         }
         
         dividerVerticalView.snp.makeConstraints { (make) in
             make.width.equalTo(1)
             make.centerX.equalToSuperview()
             make.top.equalToSuperview()
-            make.bottom.equalTo(dividerHorizontalView.snp.top)
-        }
-        
-        dividerHorizontalView.snp.makeConstraints { (make) in
-            make.height.equalTo(1)
-            make.width.centerX.equalToSuperview()
-            make.bottom.equalTo(bottomInfoView.snp.top)
+            make.bottom.equalToSuperview()
         }
         
         awayTeamView.snp.makeConstraints { (make) in
             make.leading.top.equalToSuperview()
-            make.bottom.equalTo(dividerHorizontalView.snp.bottom)
+            make.bottom.equalToSuperview()
             make.trailing.equalTo(dividerVerticalView.snp.leading)
         }
         
         homeTeamView.snp.makeConstraints { (make) in
             make.trailing.top.equalToSuperview()
-            make.bottom.equalTo(dividerHorizontalView.snp.bottom)
+            make.bottom.equalToSuperview()
             make.leading.equalTo(dividerVerticalView.snp.trailing)
         }
     }

@@ -86,6 +86,10 @@ extension PickemEditViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:PickemEditTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PickemEditTableViewCell") as! PickemEditTableViewCell
         cell.pick = mc.picks[indexPath.row]
+        
+        cell.didChangePick = { [weak self] (pick) in
+            self?.mc.picks[indexPath.row] = pick
+        }
         return cell
     }
     

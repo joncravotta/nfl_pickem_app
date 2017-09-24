@@ -18,7 +18,10 @@ class PickemViewController: UIViewController, KolodaViewDelegate, KolodaViewData
     fileprivate let containerView = UIView()
     fileprivate let progressBarContainerView = UIView()
     fileprivate let progressBarView = UIView()
+    fileprivate let gameInfoView = GameInfoViewContainer()
     fileprivate let feedBackGenerator = UINotificationFeedbackGenerator()
+    fileprivate let awayButton = CircleButtonView()
+    fileprivate let homeButton = CircleButtonView()
     
     fileprivate var dataSource: [Game] = GameGenerator.create()
     fileprivate var currentGame: Game? = nil
@@ -45,26 +48,25 @@ class PickemViewController: UIViewController, KolodaViewDelegate, KolodaViewData
         feedBackGenerator.prepare()
         
         view.addSubview(containerView)
-        containerView.addSubview(kolodaView)
-
+        
+        
+        gameInfoView.game = dataSource[0]
+        containerView.addSubview(gameInfoView)
+        
         view.backgroundColor = .white
         containerView.backgroundColor = .white
         containerView.snp.makeConstraints({ $0.edges.equalToSuperview() })
-        
-        kolodaView.snp.makeConstraints { (make) in
-            make.height.width.equalToSuperview()
-            make.center.equalToSuperview()
-        }
-        view.backgroundColor = .white
-        
-        setUpProgressBar()
-    }
-    
-    private func setUpProgressBar() {
+
         containerView.addSubview(progressBarContainerView)
+        containerView.addSubview(awayButton)
+        containerView.addSubview(homeButton)
+        containerView.addSubview(kolodaView)
+        awayButton.backgroundColor = .white
+        homeButton.backgroundColor = .white
+    
         
         progressBarContainerView.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(20)
+            make.top.equalToSuperview().offset(64)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(15)
         }
@@ -73,11 +75,38 @@ class PickemViewController: UIViewController, KolodaViewDelegate, KolodaViewData
         progressBarView.backgroundColor = .nflSeaGreen
         
         progressBarView.snp.makeConstraints { (make) in
-            make.width.equalTo(0)
-            make.leading.top.bottom.equalTo(progressBarContainerView)
+            make.width.top.equalTo(0)
+            make.leading.bottom.equalTo(progressBarContainerView)
             make.height.equalTo(progressBarContainerView)
         }
+        
+        gameInfoView.snp.makeConstraints { (make) in
+            make.top.equalTo(progressBarContainerView.snp.bottom).offset(25)
+            make.width.equalToSuperview().multipliedBy(0.9)
+            make.height.equalTo(90)
+            make.centerX.equalToSuperview()
+        }
+        
+        kolodaView.snp.makeConstraints { (make) in
+            make.top.equalTo(gameInfoView.snp.bottom).offset(25)
+            make.width.equalToSuperview()
+            make.bottom.equalTo(awayButton.snp.top).offset(-45)
+            make.centerX.equalToSuperview()
+        }
+        
+        awayButton.snp.makeConstraints { (make) in
+            make.height.width.equalTo(56)
+            make.centerX.equalToSuperview().multipliedBy(0.5)
+            make.bottom.equalToSuperview().offset(-45)
+        }
+        
+        homeButton.snp.makeConstraints { (make) in
+            make.height.width.equalTo(56)
+            make.centerX.equalToSuperview().multipliedBy(1.5)
+            make.bottom.equalToSuperview().offset(-45)
+        }
     }
+    
     
     fileprivate func updateProgressBar(for index: Int) {
         let width = (CGFloat(index + 1) / CGFloat(dataSource.count)) * progressBarContainerView.frame.width
@@ -122,7 +151,9 @@ extension PickemViewController {
     }
     
     func koloda(_ koloda: KolodaView, didShowCardAt index: Int) {
-        currentGame = dataSource[index]
+        let game = dataSource[index]
+        currentGame = game
+        gameInfoView.game = game
     }
 }
 

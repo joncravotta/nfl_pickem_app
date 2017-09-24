@@ -34,6 +34,8 @@
 		FCCC03901F772D2500DEF7E2 /* PickemEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC038F1F772D2500DEF7E2 /* PickemEditTableViewCell.swift */; };
 		FCCC03921F772DBB00DEF7E2 /* PickemEditTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC03911F772DBB00DEF7E2 /* PickemEditTeamView.swift */; };
 		FCCC03941F77465F00DEF7E2 /* Pick.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC03931F77465F00DEF7E2 /* Pick.swift */; };
+		FCCC03961F77EE4C00DEF7E2 /* GameInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC03951F77EE4C00DEF7E2 /* GameInfoView.swift */; };
+		FCCC03981F77F43E00DEF7E2 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC03971F77F43E00DEF7E2 /* CircleButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		FCCC038F1F772D2500DEF7E2 /* PickemEditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickemEditTableViewCell.swift; sourceTree = "<group>"; };
 		FCCC03911F772DBB00DEF7E2 /* PickemEditTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickemEditTeamView.swift; sourceTree = "<group>"; };
 		FCCC03931F77465F00DEF7E2 /* Pick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pick.swift; sourceTree = "<group>"; };
+		FCCC03951F77EE4C00DEF7E2 /* GameInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoView.swift; sourceTree = "<group>"; };
+		FCCC03971F77F43E00DEF7E2 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,8 @@
 				FC4271E31F76FB19007BB1CA /* PickemOverlayView.swift */,
 				FC3E1C991F771ED500EBCCAF /* CustomKolodaView.swift */,
 				FCCC03911F772DBB00DEF7E2 /* PickemEditTeamView.swift */,
+				FCCC03951F77EE4C00DEF7E2 /* GameInfoView.swift */,
+				FCCC03971F77F43E00DEF7E2 /* CircleButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -357,6 +363,7 @@
 			files = (
 				FC4271E21F76F3B0007BB1CA /* UIView.swift in Sources */,
 				FC0A13671F76D33700AB2965 /* Team.swift in Sources */,
+				FCCC03961F77EE4C00DEF7E2 /* GameInfoView.swift in Sources */,
 				FC4271DE1F76EF74007BB1CA /* UIColor.swift in Sources */,
 				FC4271E41F76FB19007BB1CA /* PickemOverlayView.swift in Sources */,
 				FC4271E01F76F1AA007BB1CA /* Font.swift in Sources */,
@@ -378,6 +385,7 @@
 				FCCC03901F772D2500DEF7E2 /* PickemEditTableViewCell.swift in Sources */,
 				FC0A136B1F76D76700AB2965 /* GameInfo.swift in Sources */,
 				FC0A135D1F76BA2200AB2965 /* Game.swift in Sources */,
+				FCCC03981F77F43E00DEF7E2 /* CircleButtonView.swift in Sources */,
 				FC40901D1F76A81F00DBA4F9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

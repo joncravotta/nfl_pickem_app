@@ -43,10 +43,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func setupAppView() {
-        let rootvc = TabBarController()
+        let mc = PickemModelController()
+        let vc1 = PickemViewController(mc: mc)
+        let nav1 = UINavigationController(rootViewController: vc1)
         self.window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        window?.rootViewController = rootvc
+        window?.rootViewController = nav1
     }
 }
 
