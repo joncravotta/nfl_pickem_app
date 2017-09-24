@@ -25,6 +25,11 @@ class PickemEditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(PickemEditTableViewCell.self, forCellReuseIdentifier: "PickemEditTableViewCell")
+        
         setUpView()
     }
     
@@ -39,16 +44,31 @@ class PickemEditViewController: UIViewController {
         }
         
         bottomBar.snp.makeConstraints { (make) in
-            make.width.centerX.bottom.equalToSuperview()
+            make.width.centerX.equalToSuperview()
             make.height.equalTo(50)
+            make.bottom.equalToSuperview().offset(-49)
         }
     }
 }
 
-extension PickemEditViewController: UITableViewDelegate {
+extension PickemEditViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return mc.picks.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:PickemEditTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PickemEditTableViewCell") as! PickemEditTableViewCell
+        cell.game = mc.picks[indexPath.row].game
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
+    }
 }
 
-extension PickemEditViewController: UITableViewDataSource {
-    
-}
+

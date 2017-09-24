@@ -35,7 +35,7 @@ class PickemViewController: UIViewController, KolodaViewDelegate, KolodaViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Pick em"
         kolodaView.dataSource = self
         kolodaView.delegate = self
         setUpView()
@@ -95,6 +95,8 @@ class PickemViewController: UIViewController, KolodaViewDelegate, KolodaViewData
 extension PickemViewController {
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
         koloda.reloadData()
+        let vc = PickemEditViewController(mc: mc)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {

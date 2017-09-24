@@ -19,3 +19,7 @@ extension UIView {
     }
 }
 
+enum Alignment {
+    case left
+    case right
+}

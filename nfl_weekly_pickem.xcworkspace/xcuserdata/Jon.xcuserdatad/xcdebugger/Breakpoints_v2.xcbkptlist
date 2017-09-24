@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "nfl_weekly_pickem/App/ViewControllers/PickemViewControllers/PickemViewController.swift"
-            timestampString = "527901895.067013"
+            filePath = "nfl_weekly_pickem/App/ViewControllers/PickemViewControllers/PickemEditViewController.swift"
+            timestampString = "527906328.260019"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "kolodaDidRunOutOfCards(_:)"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
