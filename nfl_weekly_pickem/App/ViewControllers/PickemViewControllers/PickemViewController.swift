@@ -42,6 +42,7 @@ class PickemViewController: UIViewController, KolodaViewDelegate, KolodaViewData
         kolodaView.dataSource = self
         kolodaView.delegate = self
         setUpView()
+        setUpHandlers()
     }
     
     private func setUpView() {
@@ -107,6 +108,19 @@ class PickemViewController: UIViewController, KolodaViewDelegate, KolodaViewData
         }
     }
     
+    fileprivate func setUpHandlers() {
+        awayButton.handleTouch = { [weak self] in
+            guard let `self` = self else { return }
+            //self.animateBackgroundColorForTap()
+            self.kolodaView.swipe(.left)
+        }
+        
+        homeButton.handleTouch = { [weak self] in
+            guard let `self` = self else { return }
+            //self.animateBackgroundColorForTap()
+            self.kolodaView.swipe(.right)
+        }
+    }
     
     fileprivate func updateProgressBar(for index: Int) {
         let width = (CGFloat(index + 1) / CGFloat(dataSource.count)) * progressBarContainerView.frame.width
@@ -117,6 +131,16 @@ class PickemViewController: UIViewController, KolodaViewDelegate, KolodaViewData
         
         UIView.animate(withDuration: 0.2) {
             self.view.layoutIfNeeded()
+        }
+    }
+    
+    fileprivate func animateBackgroundColorForTap() {
+        UIView.animate(withDuration: 0.3, animations: { [weak self] in
+            self?.containerView.backgroundColor = self?.currentGame?.homeTeam.primaryColor
+        }) { (_) in
+            UIView.animate(withDuration: 0.3, animations: { [weak self] in
+                self?.containerView.backgroundColor = .white
+            })
         }
     }
 }
@@ -160,7 +184,7 @@ extension PickemViewController {
 extension PickemViewController {
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         feedBackGenerator.notificationOccurred(.success)
-        
+
         UIView.animate(withDuration: 0.25) { [weak self] in
             self?.containerView.backgroundColor = .white
         }
@@ -199,14 +223,11 @@ extension PickemViewController {
         }
     }
     
+    func kolodaSwipeThresholdRatioMargin(_ koloda: KolodaView) -> CGFloat? {
+        return 0.50
+    }
+    
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
-//        print(currentSwipeDirection)
-//        let game = dataSource[index]
-//        switch currentSwipeDirection {
-//        case .left, .topLeft, .bottomLeft: return PickemOverlayView(with: game.awayTeam)
-//        case.right, .topRight, .bottomRight: return PickemOverlayView(with: game.homeTeam)
-//        default: return nil
-//        }
         return nil
     }
 }

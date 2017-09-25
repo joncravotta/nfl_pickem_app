@@ -18,11 +18,18 @@ enum Team: String {
     case bears
     case doliphins
     case jets
-    
     case bengals
     case packers
     case chiefs
     case chargers
+    case ravens
+    case jaguars
+    case broncos
+    case bills
+    case browns
+    case colts
+    case falcons
+    case lions
     
     var city: String {
         switch self {
@@ -38,6 +45,14 @@ enum Team: String {
         case .packers: return "Green Bay"
         case .chiefs: return "Kansas City"
         case .chargers: return "Los Angeles"
+        case .ravens: return "Baltimore"
+        case .jaguars: return "Jacksonville"
+        case .broncos: return "Denver"
+        case .bills: return "Buffalo"
+        case .browns: return "Cleveland"
+        case .colts: return "Indianopolis"
+        case .falcons: return "Atlanta"
+        case .lions: return "Detriot"
         }
     }
     
@@ -63,6 +78,14 @@ enum Team: String {
         case .packers: return .packersPrimary
         case .chiefs: return .chiefsPrimary
         case .chargers: return .chargersPrimary
+        case .ravens: return .ravensPrimary
+        case .jaguars: return .jaguarsPrimary
+        case .broncos: return .broncosPrimary
+        case .bills: return .billsPrimary
+        case .browns: return .brownsPrimary
+        case .colts: return .coltsPrimary
+        case .falcons: return .falconsPrimary
+        case .lions: return .lionsPrimary
         }
     }
 }

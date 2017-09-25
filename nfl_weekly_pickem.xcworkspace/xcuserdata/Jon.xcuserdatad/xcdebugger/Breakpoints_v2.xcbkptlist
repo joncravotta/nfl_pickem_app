@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "nfl_weekly_pickem/App/ViewControllers/PickemViewControllers/PickemEditViewController.swift"
-            timestampString = "527956148.710038"
+            filePath = "nfl_weekly_pickem/App/ViewControllers/PickemViewControllers/PickemViewController.swift"
+            timestampString = "527998106.33"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "setUpHandlers()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nfl_weekly_pickem/App/Views/CircleButtonView.swift"
+            timestampString = "527998106.330261"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "handleGesture()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
