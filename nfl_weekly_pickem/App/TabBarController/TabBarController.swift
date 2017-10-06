@@ -16,15 +16,14 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     private func setUpView() {
-        
-        let mc = PickemModelController()
-        let vc1 = PickemViewController(mc: mc)
-        let nav1 = UINavigationController(rootViewController: vc1)
-        nav1.tabBarItem = UITabBarItem(title: "one", image: nil, tag: 0)
-        let vc2 = UIViewController()
-        vc2.tabBarItem = UITabBarItem(title: "two", image: nil, tag: 1)
-        
-        self.viewControllers = [nav1, vc2]
+//        let mc = PickemModelController()
+//        let vc1 = PickemViewController(mc: mc)
+//        let nav1 = UINavigationController(rootViewController: vc1)
+//        nav1.tabBarItem = UITabBarItem(title: "one", image: nil, tag: 0)
+//        let vc2 = UIViewController()
+//        vc2.tabBarItem = UITabBarItem(title: "two", image: nil, tag: 1)
+//        
+//        self.viewControllers = [nav1, vc2]
     }
     
 }

@@ -60,7 +60,7 @@ class PickemEditViewController: UIViewController {
         bottomBar.snp.makeConstraints { (make) in
             make.width.centerX.equalToSuperview()
             make.height.equalTo(60)
-            make.bottom.equalToSuperview().offset(-49)
+            make.bottom.equalToSuperview()
         }
         
         bottomBarLabel.snp.makeConstraints { (make) in

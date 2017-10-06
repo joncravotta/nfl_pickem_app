@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7A69A8378B0240E289BA910DC5ACD543"
+               BlueprintIdentifier = "EBD1D5A691D38474C17690EA1C86997D"
                BuildableName = "Pods_nfl_weekly_pickem.framework"
                BlueprintName = "Pods-nfl_weekly_pickem"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7A69A8378B0240E289BA910DC5ACD543"
+            BlueprintIdentifier = "EBD1D5A691D38474C17690EA1C86997D"
             BuildableName = "Pods_nfl_weekly_pickem.framework"
             BlueprintName = "Pods-nfl_weekly_pickem"
             ReferencedContainer = "container:Pods.xcodeproj">

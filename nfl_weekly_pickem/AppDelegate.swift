@@ -43,12 +43,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func setupAppView() {
-        let mc = PickemModelController()
-        let vc1 = PickemViewController(mc: mc)
-        let nav1 = UINavigationController(rootViewController: vc1)
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
-        window?.rootViewController = nav1
+        
+        
+        NetworkClient.makeRequest { (response) in
+            switch response {
+            case .success(let json):
+                print("json")
+                let games = Games(data: json)
+                let mc = PickemModelController(games: games.games)
+                let vc1 = PickemViewController(mc: mc)
+                let nav1 = UINavigationController(rootViewController: vc1)
+                self.window = UIWindow(frame: UIScreen.main.bounds)
+                self.window?.makeKeyAndVisible()
+                self.window?.rootViewController = nav1
+            case .error: print("boo")
+            }
+        }
     }
 }
 

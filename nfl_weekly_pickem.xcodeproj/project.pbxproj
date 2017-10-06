@@ -17,6 +17,8 @@
 		FC0A136B1F76D76700AB2965 /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A136A1F76D76700AB2965 /* GameInfo.swift */; };
 		FC0A136D1F76E9BE00AB2965 /* PickemBottomInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A136C1F76E9BE00AB2965 /* PickemBottomInfoView.swift */; };
 		FC0A136F1F76EB5B00AB2965 /* AtCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A136E1F76EB5B00AB2965 /* AtCircleView.swift */; };
+		FC363CF01F7C8D3600B83415 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC363CEF1F7C8D3600B83415 /* Games.swift */; };
+		FC363CF31F7F479F00B83415 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC363CF21F7F479F00B83415 /* NetworkClient.swift */; };
 		FC3E1C981F771E9A00EBCCAF /* KolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3E1C971F771E9A00EBCCAF /* KolodaView.swift */; };
 		FC3E1C9A1F771ED500EBCCAF /* CustomKolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3E1C991F771ED500EBCCAF /* CustomKolodaView.swift */; };
 		FC3E1C9D1F77233600EBCCAF /* PickemModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3E1C9C1F77233600EBCCAF /* PickemModelController.swift */; };
@@ -51,6 +53,8 @@
 		FC0A136A1F76D76700AB2965 /* GameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfo.swift; sourceTree = "<group>"; };
 		FC0A136C1F76E9BE00AB2965 /* PickemBottomInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickemBottomInfoView.swift; sourceTree = "<group>"; };
 		FC0A136E1F76EB5B00AB2965 /* AtCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtCircleView.swift; sourceTree = "<group>"; };
+		FC363CEF1F7C8D3600B83415 /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
+		FC363CF21F7F479F00B83415 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		FC3E1C971F771E9A00EBCCAF /* KolodaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KolodaView.swift; sourceTree = "<group>"; };
 		FC3E1C991F771ED500EBCCAF /* CustomKolodaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKolodaView.swift; sourceTree = "<group>"; };
 		FC3E1C9C1F77233600EBCCAF /* PickemModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickemModelController.swift; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 				FC0A13681F76D6BD00AB2965 /* TeamStat.swift */,
 				FC0A136A1F76D76700AB2965 /* GameInfo.swift */,
 				FCCC03931F77465F00DEF7E2 /* Pick.swift */,
+				FC363CEF1F7C8D3600B83415 /* Games.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -142,6 +147,14 @@
 				FCCC03971F77F43E00DEF7E2 /* CircleButtonView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FC363CF11F7F473500B83415 /* NetworkClient */ = {
+			isa = PBXGroup;
+			children = (
+				FC363CF21F7F479F00B83415 /* NetworkClient.swift */,
+			);
+			path = NetworkClient;
 			sourceTree = "<group>";
 		};
 		FC3E1C9B1F77231800EBCCAF /* ModelControllers */ = {
@@ -186,6 +199,7 @@
 		FC40902E1F76A8D000DBA4F9 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				FC363CF11F7F473500B83415 /* NetworkClient */,
 				FC3E1C9B1F77231800EBCCAF /* ModelControllers */,
 				FC0A13611F76CA9700AB2965 /* Views */,
 				FC0A135E1F76C10F00AB2965 /* Extension */,
@@ -306,12 +320,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-nfl_weekly_pickem/Pods-nfl_weekly_pickem-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
@@ -364,6 +380,7 @@
 				FC4271E21F76F3B0007BB1CA /* UIView.swift in Sources */,
 				FC0A13671F76D33700AB2965 /* Team.swift in Sources */,
 				FCCC03961F77EE4C00DEF7E2 /* GameInfoView.swift in Sources */,
+				FC363CF01F7C8D3600B83415 /* Games.swift in Sources */,
 				FC4271DE1F76EF74007BB1CA /* UIColor.swift in Sources */,
 				FC4271E41F76FB19007BB1CA /* PickemOverlayView.swift in Sources */,
 				FC4271E01F76F1AA007BB1CA /* Font.swift in Sources */,
@@ -371,6 +388,7 @@
 				FC0A13691F76D6BD00AB2965 /* TeamStat.swift in Sources */,
 				FC4090351F76AE2000DBA4F9 /* PickemViewController.swift in Sources */,
 				FC0A13651F76CBBF00AB2965 /* PickemTeamInfoView.swift in Sources */,
+				FC363CF31F7F479F00B83415 /* NetworkClient.swift in Sources */,
 				FC0A13631F76CAA800AB2965 /* PickemKolodaView.swift in Sources */,
 				FC0A136F1F76EB5B00AB2965 /* AtCircleView.swift in Sources */,
 				FC0A136D1F76E9BE00AB2965 /* PickemBottomInfoView.swift in Sources */,

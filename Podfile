@@ -7,6 +7,6 @@ target 'nfl_weekly_pickem' do
   use_frameworks!
   pod 'Koloda', '~> 4.0'
   pod 'SnapKit', '~> 3.2.0'
-  # Pods for nfl_weekly_pickem
+  pod 'Alamofire', '~> 4.5.1'
 
 end

@@ -23,13 +23,14 @@ class PickemViewController: UIViewController, KolodaViewDelegate, KolodaViewData
     fileprivate let awayButton = CircleButtonView()
     fileprivate let homeButton = CircleButtonView()
     
-    fileprivate var dataSource: [Game] = GameGenerator.create()
+    fileprivate var dataSource: [Game]
     fileprivate var currentGame: Game? = nil
     
     fileprivate let mc: PickemModelController
     
     init(mc: PickemModelController) {
         self.mc = mc
+        self.dataSource = mc.games
         super.init(nibName: nil, bundle: nil)
         currentGame = dataSource[0]
     }
